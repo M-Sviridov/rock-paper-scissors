@@ -27,13 +27,15 @@ function game() {
         const playerSelection = prompt('Make your move: ').toLowerCase();
         if (playRound(playerSelection, computerSelection) === 'player') {
             playerPoints++;
+            return 'The Player wins the round.'
         } else if (playRound(playerSelection, computerSelection) === 'computer') {
             computerPoints++;
+            return 'The Computer wins the round.'
         }
         if (computerPoints === 5) {
-            return 'The Computer wins.'
+            return 'The Computer has won the game.'
         } else if (playerPoints === 5) {
-            return 'The Player wins.'
+            return 'The Player has won the game.'
         }
     }
 }
