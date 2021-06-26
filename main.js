@@ -5,8 +5,9 @@ function computerPlay() {
 
 
 function playRound(playerSelection, computerSelection) {
+    console.log(playerSelection, computerSelection)
     if (playerSelection === computerSelection) {
-        return 'It is a tie!'
+        return 'tie'
     } else if (
         (playerSelection === 'rock' && computerSelection === 'scissors') ||
         (playerSelection === 'scissors' && computerSelection === 'paper') ||
@@ -27,15 +28,18 @@ function game() {
         const playerSelection = prompt('Make your move: ').toLowerCase();
         if (playRound(playerSelection, computerSelection) === 'player') {
             playerPoints++;
-            return 'The Player wins the round.'
+            alert('The Player wins the round.')
         } else if (playRound(playerSelection, computerSelection) === 'computer') {
             computerPoints++;
-            return 'The Computer wins the round.'
+            alert('The Computer wins the round.')
+        } else if (playRound(playerSelection, computerSelection) === 'tie') {
+            alert('It is a tie!')
         }
+
         if (computerPoints === 5) {
-            return 'The Computer has won the game.'
+            alert('The Computer has won the game.')
         } else if (playerPoints === 5) {
-            return 'The Player has won the game.'
+            alert('The Player has won the game.')
         }
     }
 }
