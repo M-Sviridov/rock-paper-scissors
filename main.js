@@ -5,7 +5,6 @@ function computerPlay() {
 
 
 function playRound(playerSelection, computerSelection) {
-    console.log(playerSelection, computerSelection)
     if (playerSelection === computerSelection) {
         return 'tie'
     } else if (
@@ -26,6 +25,7 @@ function game() {
     while (computerPoints < 5 && playerPoints < 5) {
         const computerSelection = computerPlay();
         const playerSelection = prompt('Make your move: ').toLowerCase();
+
         if (playRound(playerSelection, computerSelection) === 'player') {
             playerPoints++;
             alert('The Player wins the round.')
