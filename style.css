@@ -34,6 +34,7 @@ h3 {
 
 #rock {
     height: 125px;
+    transition-duration: 500ms;
 }
 
 #rock:hover {
@@ -44,6 +45,7 @@ h3 {
 #paper {
     height: 125px;
     margin: 0px 100px 0px 100px;
+    transition-duration: 500ms;
 }
 
 #paper:hover {
@@ -53,6 +55,7 @@ h3 {
 
 #scissors {
     height: 125px;
+    transition-duration: 500ms;
 }
 
 #scissors:hover {
@@ -110,4 +113,42 @@ h3 {
     margin-top: 5px;
     font-size: 14px;
     color:#cdcaba;
+}
+
+#play-content {
+    color: #9a9165;
+    margin-top: 50px;
+}
+
+#play-result {
+    color: #cdcaba;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+#game-result {
+    color: #cdcaba;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+#reset-button {
+    color: #2A2A2A;
+    background-color: #cdcaba;
+    font-size: 14px;
+    font-family: 'monaco';
+    font-weight: 500;
+    margin-top: 100px;
+    border-radius: 1em;
+    border: 1px solid #9a9165;
+    height: 40px;
+    width: 100px;
+    transition-duration: 500ms;
+}
+
+#reset-button:hover {
+    cursor: pointer;
+    box-shadow: 0 1px 1px #9a9165;
+    border: 1px solid #9a9165;
+    transform: scale(1.05);
 }
