@@ -1,7 +1,25 @@
+let computerPoints = 0;
+let playerPoints = 0;
+const rock = document.getElementById('rock');
+const paper = document.getElementById('paper');
+const scissors = document.getElementById('scissors');
+
 function computerPlay() {
     let moves = ['rock', 'paper', 'scissors'];
     return moves[Math.floor(Math.random() * moves.length)];
 }
+
+rock.addEventListener('click', () => {
+    game(playerSelection = rock.getAttribute('value'))
+});
+
+paper.addEventListener('click', () => {
+    game(playerSelection = paper.getAttribute('value'))
+});
+
+scissors.addEventListener('click', () => {
+    game(playerSelection = scissors.getAttribute('value'))
+});
 
 
 function playRound(playerSelection, computerSelection) {
@@ -17,29 +35,25 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function game(playerSelection) {
+    const computerSelection = computerPlay();
 
-function game() {
-    let computerPoints = 0;
-    let playerPoints = 0;
-
-    while (computerPoints < 5 && playerPoints < 5) {
-        const computerSelection = computerPlay();
-        const playerSelection = prompt('Make your move: ').toLowerCase();
-
-        if (playRound(playerSelection, computerSelection) === 'player') {
-            playerPoints++;
-            alert('The Player wins the round.')
-        } else if (playRound(playerSelection, computerSelection) === 'computer') {
-            computerPoints++;
-            alert('The Computer wins the round.')
-        } else if (playRound(playerSelection, computerSelection) === 'tie') {
-            alert('It is a tie!')
-        }
-
-        if (computerPoints === 5) {
-            alert('The Computer has won the game.')
-        } else if (playerPoints === 5) {
-            alert('The Player has won the game.')
-        }
+    if (playRound(playerSelection, computerSelection) === 'player') {
+        playerPoints++;
+        console.log('The Player wins the round.')
+    } else if (playRound(playerSelection, computerSelection) === 'computer') {
+        computerPoints++;
+        console.log('The Computer wins the round.')
+    } else if (playRound(playerSelection, computerSelection) === 'tie') {
+        console.log('It is a tie!')
     }
+
+    if (computerPoints === 5) {
+        console.log('The Computer has won the game.')
+    } else if (playerPoints === 5) {
+        console.log('The Player has won the game.')
+    }
+
+    console.log(playerPoints, computerPoints)
+
 }
