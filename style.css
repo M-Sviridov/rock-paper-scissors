@@ -32,17 +32,32 @@ h3 {
     margin-top: 150px;
 }
 
-#rock-button {
+#rock {
     height: 125px;
 }
 
-#paper-button {
+#rock:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#paper {
     height: 125px;
     margin: 0px 100px 0px 100px;
 }
 
-#scissors-button {
+#paper:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#scissors {
     height: 125px;
+}
+
+#scissors:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .scores-label {
